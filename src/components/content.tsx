@@ -1,3 +1,4 @@
+import Notes from "@/components/notes";
 import { api, type RouterOutputs } from "@/utils/api";
 import { useSession } from "next-auth/react";
 import { useState, type FC } from "react";
@@ -56,7 +57,9 @@ const Content: FC = () => {
           }}
         />
       </div>
-      <div className="col-span-3"></div>
+      <div className="col-span-3">
+        <Notes topicId={selectedTopic?.id ?? ""} />
+      </div>
     </div>
   );
 };
