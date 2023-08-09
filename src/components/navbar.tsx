@@ -7,18 +7,28 @@ const Navbar: FC = () => {
   const { data: sessionData } = useSession();
 
   return (
-    <div className="container navbar mx-auto py-4">
+    <div className="container navbar mx-auto px-8 py-4">
       <div className="flex-1">
         <Link href="/" className="btn btn-ghost px-2">
           <Image
             src="/logoipsum.webp"
             alt="Logo Ipsum"
+            loading="eager"
+            priority
+            sizes="(max-width: 64rem) 100vw, 1024px"
             width={150}
             height={50}
           />
         </Link>
       </div>
-      <div className="flex-none gap-2">
+      <div className="flex-none items-center gap-2">
+        <ul className="menu menu-horizontal px-1">
+          <li>
+            <Link href="/" className="font-bold">
+              Home
+            </Link>
+          </li>
+        </ul>
         <div className="dropdown dropdown-end">
           {sessionData?.user ? (
             <>
@@ -30,7 +40,9 @@ const Navbar: FC = () => {
                   <Image
                     src={sessionData?.user?.image ?? ""}
                     alt={sessionData?.user?.name ?? ""}
+                    priority
                     unoptimized
+                    sizes="(max-width: 64rem) 100vw, 1024px"
                     width={40}
                     height={40}
                     loader={({ src }) => src}
@@ -51,7 +63,7 @@ const Navbar: FC = () => {
             </>
           ) : (
             <button
-              className="btn btn-ghost rounded-btn"
+              className="btn btn-primary rounded-btn capitalize"
               onClick={() => void signIn()}
             >
               Sign in
