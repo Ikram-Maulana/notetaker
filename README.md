@@ -1,28 +1,52 @@
-# Create T3 App
+# Notetaker
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+Notetaker is an example of a simple note taking app built using Next.js, NextAuth, TRPC, and TailwindCSS. This project uses the template from T3 Stack.
 
-## What's next? How do I make an app with this?
+Live example hosted on Vercel: https://notetaker-ikram-maulana.vercel.app/
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+![Notetaker](public/notetaker.png)
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## 🔑 Getting Github Client ID and Secret
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+To get your Github Client ID and Secret, you need to create a Github OAuth app. You can follow the steps from [this guide](https://scribehow.com/shared/Getting_Github_Client_ID_and_Secret__KEf9Rk1FQtOzi5CaVFJxyA). then add your `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET` to your `.env` file.
 
-## Learn More
+## 🖥️ Running Locally
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+1. Clone this repo
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+   ```bash
+   https://github.com/Ikram-Maulana/notetaker.git
+   ```
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+2. Install dependencies
 
-## How do I deploy this?
+   ```bash
+   pnpm install
+   ```
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+3. Add your `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET` to your `.env` file
+
+   ```bash
+   GITHUB_CLIENT_ID=YOUR_CLIENT_ID
+   GITHUB_CLIENT_SECRET=YOUR_CLIENT_SECRET
+   ```
+
+4. Run the development server
+
+   ```bash
+    pnpm dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## 🚀 Deploy on Vercel
+
+1. Fork this repo
+
+2. Create a new project on Vercel
+
+3. Import your repo
+
+4. Add your `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET` to your Vercel project's environment variables (**_Note: Make another Github OAuth app for your production deployment_**)
+
+5. Deploy
