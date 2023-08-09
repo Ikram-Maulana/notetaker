@@ -1,3 +1,4 @@
+import Content from "@/components/content";
 import Navbar from "@/components/navbar";
 import Head from "next/head";
 
@@ -5,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Home | Notetaker</title>
+        <title>Notetaker</title>
         <meta
           name="description"
           content="A simple note taking app built with Next.js, NextAuth, TRPC, and TailwindCSS."
@@ -22,7 +23,10 @@ export default function Home() {
       </Head>
 
       <Navbar />
-      <main></main>
+
+      <main className="container mx-auto">
+        <Content />
+      </main>
     </>
   );
 }
