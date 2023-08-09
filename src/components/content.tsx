@@ -26,7 +26,7 @@ const Content: FC = () => {
   });
 
   return (
-    <div className="mx-5 mt-5 grid grid-cols-4 gap-2">
+    <div className="mx-5 mt-5 grid grid-cols-1 gap-2 pb-12 md:grid-cols-4 md:pb-20">
       <div className="px-2">
         <ul className="menu rounded-box w-56 bg-base-100 p-2">
           {topics?.map((topic) => (
@@ -57,7 +57,7 @@ const Content: FC = () => {
           }}
         />
       </div>
-      <div className="col-span-3">
+      <div className="md:col-span-3">
         <Notes topicId={selectedTopic?.id ?? ""} />
       </div>
     </div>

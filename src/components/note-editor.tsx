@@ -26,7 +26,7 @@ const NoteEditor: FC<NoteEditorProps> = ({ onSave }) => {
         <ReactCodeMirror
           value={code}
           onChange={(value) => setCode(value)}
-          width="500px"
+          width="100%"
           height="30vh"
           minWidth="100%"
           minHeight="100%"
